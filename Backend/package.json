@@ -4,8 +4,14 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo \"No build specified\" && exit 1",
+    "test": "echo \"No test specified\" && exit 1",
+    "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jil-Patel05/WeahtherMERN.git"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,5 +22,9 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.1"
-  }
+  },
+  "bugs": {
+        "url": "https://github.com/Jil-Patel05/WeahtherMERN/issues"
+    },
+    "homepage": "https://github.com/Jil-Patel05/WeahtherMERN#readme"
 }
