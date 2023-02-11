@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Roboto&family=Work+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    /* 1rem=10px */
+}
+/* body{ */
+    /* height: 100vh; */
+    /* position: relative; */
+/* } */
+    /* navbar */
+
+.navbar{
+        width: 100%;
+        background-color:#516071;
+}
+.navbar .container-fluid ul li a{
+       font-size: 1.8rem;
+}
+
+.collapse{
+    margin-right: 2rem;
+}
+.navbar .container-fluid ul li{
+    margin: 0.5rem;
+}
+.navbar .container-fluid .Logo_name{
+    font-size: 2rem;
+    padding-left: 2rem;
+}  
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rotate 2s linear infinite ;
+}
+
+@keyframes rotate{
+     0%{
+         transform: rotate(0deg);
+     }
+     100%{
+        transform: rotate(360deg);
+     }
+}
+
+/* footer */
+.footer{
+    /* position: sticky ;
+    top: 100%; */
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-size: 2rem;
+    background-color:#d3d5d8;
+    color: white;
+}
+
+/* home page */
+
+.main_content{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 10rem 1fr 1fr 10rem;
+}
+.content{
+    grid-column: 2/3;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content_1{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+.content p{
+     font-size: 1.5rem;
+     font-weight: 400;
+     font-family: 'Montserrat', sans-serif;
+}
+.content h2{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2rem;
+}
+.content span{
+    color:#48b7e6;
+    font-weight: bold;
+}
+.content .btn{
+   border-radius: 0.5rem;
+   text-decoration: none;
+   height: 4rem;
+   width: 15rem;
+   font-weight:800;
+   font-size: 1.5rem;
+   background-color: #d3d5d8;
+   color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition-duration: 0.5s ;
+   box-shadow: 0.2rem 0.6rem 1rem rgba(0,0,0,0.3);
+}
+.content .btn:hover{
+    transform: scale3d(1.02,1.02,1.02);
+    background-color:#516071 ;
+    color: white;
+ }
+.image{
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    justify-content: center;
+}
+
+/* about page */
+
+.photo{
+    width: 80%;
+    height: 80%;
+    background-color:#f9fbfd;
+}
+.main_header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10rem 1fr 1fr 10rem;
+}
+.main_photo{
+    grid-column: 2/3;
+    /* height: 60rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.header{
+    grid-column: 3/4;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header_1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.header p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.header h2{
+   font-size: 2rem;
+   font-weight: 400;
+   font-family: 'Montserrat', sans-serif;
+   margin-bottom: 2rem;
+}
+.header span{
+   color:#48b7e6;
+   font-weight: bold;
+}
+.header .btn{
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  height: 4rem;
+  width: 10rem;
+  font-weight:800;
+  font-size: 1.3rem;
+  background-color: #d3d5d8;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.5s ;
+  box-shadow: 0.2rem 0.6rem 1rem rgba(0,0,0,0.3);
+}
+.header .btn:hover{
+   transform: scale3d(1.02,1.02,1.02);
+   background-color:#516071 ;
+   color: white;
+}
+.myphoto{
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+/* wather page */
+
+.main_weather{
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search_form{
+   width: 50%;
+   position: relative;
+}
+.search_form input[type="text"]{
+    width: 100%;
+    padding: 2rem 9rem 2rem 2rem;
+    color: black;
+    background-color:#d3d5d8 ;
+    outline: none;
+    border: none;
+    border-radius: 3rem;
+    font-size: 1.7rem;
+}
+::placeholder{
+    color: black;
+}
+.search_form input[type="submit"]{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: #a6acae;
+  padding: 0 3rem;
+  color: black;
+  font-size: 1.6rem;
+  box-shadow: 0rem 0.5rem 0.5rem rgba(13, 12, 12, 0.3);
+}
+.search_form input[type="submit"]:hover{
+    color:#a6acae;
+    background-color: black;
+    font-weight: 600;
+}
+.weather{
+    width: 30rem;
+    margin:4rem auto;
+    min-height: 20rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 1rem;
+    background-color:#d3d5d8 ;
+}
+.top{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a6acae;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    margin: 0rem;
+}
+.top p{
+    color: black;
+    font-weight: 300;
+    padding: 1rem;
+}
+.middle{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.middle #city_name{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+}
+.middle .middle_top{
+    display: flex;
+    height: 12rem;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+}
+.middle .middle_top p{
+    font-size: 4.5rem;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info_p{
+    font-size: 1.5rem;
+}
+.info .fa-solid{
+    font-size: 5.5rem;
+}
+
+/* error page */
+
+.err{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.err_photo{
+     width: 500px;
+     height: 500px;
+}
+.err p{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify ;
+}
+.err .btn{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    height: 4rem;
+    width: 10rem;
+    font-weight:800;
+    font-size: 1.3rem;
+    background-color: #d3d5d8;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s ;
+  box-shadow: 0.2rem 0.6rem 1rem rgba(0,0,0,0.3);
+  }
+  .err .btn:hover{
+     transform: scale3d(1.02,1.02,1.02);
+     background-color:#516071 ;
+     color: white;
+  }
+
+@media (min-width:869px) and (max-width:1000px){
+    .myphoto{
+        height: 60%;
+    }
+    .photo{
+        height: 70%;
+    }
+}
+
+@media (max-width:868px){
+ 
+    .footer{
+        padding: 0.5rem;
+        font-size: 1.8rem;
+        text-align: justify;
+        text-align-last: center
+    }
+    .main_header{
+        display: flex;
+        flex-direction: column;
+    }
+    .main_photo{
+        height: 40rem;
+        align-items: center;
+    }
+    .header{
+        padding: 1rem;
+        height: 20rem;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .header .btn{
+        height: 4rem;
+        width: 10rem;
+        font-size: 1.3rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+    .myphoto{
+        width: 80%;
+        height: 30rem;
+        border-radius: 2rem;
+    }
+    .header p{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+    .header h2{
+       font-size: 1.5rem;
+       margin-left: 1rem;
+    }
+    .main_content{
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        padding: 1rem;
+        height: 20rem;
+       
+    }
+    .image{
+        height: 40rem;
+        align-items: center;
+    }
+    .content p{
+        font-size: 1.5rem;
+    }
+    .content h2{
+       margin-top:  0.8rem;
+       font-size: 1.5rem;
+       margin-bottom: 4rem;
+    }
+    .content .btn{
+        height: 4rem;
+        width: 10rem;
+        font-size: 1.3rem;
+        margin-left: 2rem;
+    }
+ }
+ @media (max-width:310px){
+    .main_photo{
+        height: 30rem;
+        align-items: center;
+    }
+    .footer{
+        font-size: 1.4rem;
+    }
+    .myphoto{
+        height: 20rem;
+    }
+    .header .btn{
+        height: 3.5rem;
+        width: 9rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+     }
+    .header p{
+        font-size: 1.4rem;
+    }
+    .header h2{
+       font-size: 1.4rem;
+    }
+    .content p{
+        font-size: 1.4rem;
+    }
+    .content h2{
+       font-size: 1.4rem;
+       margin-bottom: 3rem;
+    }
+    .content .btn{
+        height: 3.5rem;
+        width: 9rem;
+        margin: 1rem;
+        font-size: 1.1rem;
+     }
+}
+
+ @media (max-width:768px){
+    .search{
+        width: 80%;
+    }
+    .Logo_name{
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+    }
+    .search_form{
+        width: 80%;
+    }
+    .search_form input[type="submit"]{
+        padding: 0 2rem;
+    }
+   
+ }
+ @media (max-width:500px){
+    .search_form{
+        width: 100%;
+    }
+    .search_form input[type="submit"]{
+        padding: 0 1.5rem;
+        font-size: 1.5rem;
+    }
+    .search_form input[type="text"]{
+       padding: 2rem 7rem 2rem 2rem;
+        font-size: 1.5rem;
+    }
+    .weather{
+        width: 75%;
+    }
+ }
+ @media (max-width:360px){
+    .middle{
+        padding: 1rem;
+    }
+    .middle #city_name{
+        font-size: 1.5rem;
+    }
+    .middle .middle_top p{
+        font-size: 3rem;
+    }
+    .info_p{
+        font-size: 1.1rem;
+    }
+ }
+ .signup{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup_form{
+      width: 60%;
+      position: absolute;
+      background-color: white;
+      top:6.5rem;
+      display: flex;
+      justify-content: center;
+      box-shadow: 2px 1px 5px grey;
+      border-radius: 2rem;
+  }
+  .signup_content{
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     padding: 4rem;
+  }
+  .signup_content .p{
+    width: 90%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    
+  }
+  .imformation {
+    width: 90%;
+    margin: 1.2rem;
+    border-bottom: solid 1px black;
+  }
+  .imformation input{
+     border: none;
+     outline: none;
+     width: 70%;
+     font-size: 1.6rem;
+     margin: 0.8rem;
+  }
+  .imformation .svg_icons {
+    transform: scale(1.5);
+    margin: 0.2rem;
+  }
+  .signup_photo{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .signup_photo .photo{
+    width: 80%;
+    height: 80%;
+  }
+  .form_submit{
+     height: 4rem;
+     width: 9rem;
+     border: none;
+     outline: none;
+     font-size: 1.5rem;
+     background-color: #5555f0;
+     color: white;
+     box-shadow: 2px 1px 5px grey;
+     border-radius: 1rem;
+     margin-left: 6rem;
+     margin-top: 2rem;
+     transition: all 0.3s linear;
+  }
+  .form_submit:hover{
+    color:#5555f0;
+    background-color: white;
+    transform: scale3d(1.02,1.02,1.02);
+  }
+  
+  /* 
+  ::::::::::::::::::::::::::::::::::::
+  ::::        SIGNIN PAGE         ::::
+  :::::::::::::::::::::::::::::::::::: */
+  
+  .signin{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .signin_form{
+      width: 50%;
+      position: absolute;
+      background-color: white;
+      top:14.5rem;
+      display: flex;
+      justify-content: center;
+      box-shadow: 2px 1px 5px grey;
+      border-radius: 2rem;
+  }
+  .signin_content{
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 4rem;
+     align-items: flex-start;
+     padding-left: 0rem;
+  }
+  .signin_content .p{
+    width: 90%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    
+  }
+  .imformation_1 {
+    width: 90%;
+    margin: 1.2rem;
+    border-bottom: solid 1px black;
+  }
+  .imformation_1 input{
+     border: none;
+     outline: none;
+     width: 70%;
+     font-size: 1.6rem;
+     margin: 0.8rem;
+  }
+  .signin_photo{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .signin_photo .photo_1{
+    width: 80%;
+    height: 80%;
+  }
+  
