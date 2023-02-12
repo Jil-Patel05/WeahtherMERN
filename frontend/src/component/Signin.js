@@ -21,17 +21,26 @@ const Signin = () => {
     console.log("clicked");
     const {  email, password } = user;
     
-    const res = await axios.post("/signin", {
+    try {
+      const res = await axios.post("/signin", {
         email, password
     });
     if (res.status === 422 || !res) {
-      window.alert("login Failed")
+      window.alert("Invalid details")
     }
     else {
        dispatch({ type: "user", payload:true})
        window.alert("login successfull");
        navigate("/")
     }
+    } 
+    catch (err) {
+      setuser({
+        email:"",password:""
+      })
+      window.alert("Invalid details");
+    }
+   
   } 
   return (
     <>
@@ -46,7 +55,7 @@ const Signin = () => {
             </div>
             <div className="imformation_1">
               <EmailIcon className="svg_icons" />
-              <input type="text" placeholder='Enter Your email' name='email' id='email' autoComplete='off'  value={user.name} onChange={handleInput}/>
+              <input type="text" placeholder='Enter Your email' name='email' id='email' autoComplete='off'  value={user.email} onChange={handleInput}/>
             </div>
             <div className="imformation_1">
               <KeyIcon className="svg_icons" />
