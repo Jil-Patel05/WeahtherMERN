@@ -7,7 +7,7 @@ import axios from 'axios'
 
 
 const Signin = () => {
-  const { state, dispatch } = useContext(Usercontext);
+  const {dispatch } = useContext(Usercontext);
   const navigate = useNavigate();
   const [user, setuser] = useState({
     email:"",password:""
@@ -32,7 +32,6 @@ const Signin = () => {
        window.alert("login successfull");
        navigate("/")
     }
-   
   } 
   return (
     <>
@@ -54,7 +53,7 @@ const Signin = () => {
               <input type="password" placeholder='Enter Your password' name='password' id='password' autoComplete='off' value={user.password} onChange={handleInput} />
             </div>
             <div className='form-group form-button'>
-              <input type="submit" name="signup" id="signup" value="Register" className='form_submit' onClick={Change} />
+              <input type="submit" name="signup" id="signup" value="login" className='form_submit' onClick={Change} />
             </div>
           </div>
          

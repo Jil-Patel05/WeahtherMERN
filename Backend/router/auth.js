@@ -63,7 +63,7 @@ router.post("/signin", async(req, res) => {
     }
 
 });
-router.get("/about", authenticate, (req, res) => {
+router.get("/info", authenticate, (req, res) => {
      res.send(req.rootuser)
 })
 router.get("/logout", authenticate, (req, res) => {

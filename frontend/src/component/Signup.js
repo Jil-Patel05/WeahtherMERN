@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, {useState } from 'react'
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -7,8 +7,6 @@ import KeyIcon from '@mui/icons-material/Key';
 import LockPersonIcon from '@mui/icons-material/LockPerson';
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
-import { Usercontext } from '../App';
-
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -46,7 +44,7 @@ const Signup = () => {
             <div className="p">
               <p>Sign Up</p>
             </div>
-            <form method='POST'>
+            <form method='POST' className='signup_info'>
               <div className="imformation">
                 <AccountBoxIcon className="svg_icons" />
                 <input type="text" placeholder='Enter Your Name' name='name' id='name' autoComplete='off' value={user.name} onChange={handleInput} />

@@ -10,10 +10,25 @@ html{
     font-size: 62.5%;
     /* 1rem=10px */
 }
-/* body{ */
-    /* height: 100vh; */
-    /* position: relative; */
-/* } */
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* footer */
+.footer{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-size: 2rem;
+    background-color:#d3d5d8;
+    color: white;
+}
+
     /* navbar */
 
 .navbar{
@@ -49,21 +64,7 @@ html{
      }
 }
 
-/* footer */
-.footer{
-    /* position: sticky ;
-    top: 100%; */
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5rem;
-    font-size: 2rem;
-    background-color:#d3d5d8;
-    color: white;
-}
+
 
 /* home page */
 
@@ -206,13 +207,22 @@ html{
 }
 
 /* wather page */
+.weather_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
 
 .main_weather{
     height: 50rem;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 1px 5px grey;
+    border-radius: 1rem;
 }
 .search{
     width: 100%;
@@ -220,7 +230,7 @@ html{
     justify-content: center;
 }
 .search_form{
-   width: 50%;
+   width: 75%;
    position: relative;
 }
 .search_form input[type="text"]{
@@ -356,7 +366,7 @@ html{
      color: white;
   }
 
-@media (min-width:869px) and (max-width:1000px){
+  @media (min-width:869px) and (max-width:1000px){
     .myphoto{
         height: 60%;
     }
@@ -435,6 +445,9 @@ html{
         font-size: 1.3rem;
         margin-left: 2rem;
     }
+    .main_weather{
+        width: 85%;
+    }
  }
  @media (max-width:310px){
     .main_photo{
@@ -476,7 +489,7 @@ html{
 
  @media (max-width:768px){
     .search{
-        width: 80%;
+        width: 88%;
     }
     .Logo_name{
         display: flex;
@@ -504,7 +517,7 @@ html{
         font-size: 1.5rem;
     }
     .weather{
-        width: 75%;
+        width: 81%;
     }
  }
  @media (max-width:360px){
@@ -520,7 +533,16 @@ html{
     .info_p{
         font-size: 1.1rem;
     }
+    .main_weather{
+        width: 94%;
+    }
  }
+
+ /* 
+  ::::::::::::::::::::::::::::::::::::
+  ::::        SIGNUP PAGE         ::::
+  :::::::::::::::::::::::::::::::::::: */
+
  .signup{
     width: 100%;
     height: auto;
@@ -545,7 +567,10 @@ html{
      display: flex;
      flex-direction: column;
      align-items: flex-start;
-     padding: 4rem;
+     padding: 2rem;
+  }
+  .signup_content .signup_info{
+         width: 100%;
   }
   .signup_content .p{
     width: 90%;
@@ -562,9 +587,10 @@ html{
   .imformation input{
      border: none;
      outline: none;
-     width: 70%;
+     width: 85%;
      font-size: 1.6rem;
      margin: 0.8rem;
+     margin-right: 0rem;
   }
   .imformation .svg_icons {
     transform: scale(1.5);
@@ -598,6 +624,66 @@ html{
     color:#5555f0;
     background-color: white;
     transform: scale3d(1.02,1.02,1.02);
+  }
+  @media (max-width:1100px){
+    .signup_form{
+        width: 74%;
+    }
+  }
+  @media (max-width:768px){
+      
+      .signup_form{
+          width: 70%;
+          top:5.5rem;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2rem;
+      }
+      .signup_content{
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 2rem;
+      }
+      .signup_content .signup_info{
+             width: 90%;
+      }
+      .signup_photo{
+        width: 100%;
+        justify-content: center;
+      }
+      .signup_photo .photo{
+        width: 85%;
+        height: 85%;
+      }
+      
+  }
+  @media (max-width:470px){
+   .signup_form{
+       width: 82%;
+   }
+  }
+  @media (max-width:380px){
+    .signup_content{
+        padding-left: 0.8rem;
+    }
+    .signup_content .signup_info{
+        width: 100%;
+   }
+  }
+  @media (max-width:330px){
+    .signup_form{
+        width: 90%;
+    }
+      .imformation input{
+         font-size: 1.5rem;
+         margin-right: 0rem;
+      }
+      .imformation .svg_icons {
+        transform: scale(1.4);
+        margin: 0.15rem;
+      }
   }
   
   /* 
@@ -661,4 +747,66 @@ html{
     width: 80%;
     height: 80%;
   }
+ 
+  @media (max-width:1300px){
+    .signin_form{
+        width: 74%;
+    }
+  }
+  @media (max-width:768px){
+      
+      .signin_form{
+          width: 70%;
+          top:5.5rem;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2rem;
+      }
+      .signin_content{
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 2rem;
+      }
+      .signin_content .signin_info{
+             width: 90%;
+      }
+      .signin_photo{
+        width: 100%;
+        justify-content: center;
+      }
+      .signin_photo .photo{
+        width: 85%;
+        height: 85%;
+      }
+      
+  }
+  @media (max-width:470px){
+   .signin_form{
+       width: 82%;
+   }
+  }
+  @media (max-width:380px){
+    .signin_content{
+        padding-left: 0.8rem;
+    }
+    .signin_content .signin_info{
+        width: 100%;
+   }
+  }
+  @media (max-width:330px){
+     .signin_form{
+          width: 90%;
+      }
+      .imformation_1 input{
+         font-size: 1.5rem;
+         margin-right: 0rem;
+      }
+      .imformation_1 .svg_icons {
+        transform: scale(1.4);
+        margin: 0.15rem;
+      }
+  }
   
+ 

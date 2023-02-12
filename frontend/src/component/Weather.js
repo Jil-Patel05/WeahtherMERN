@@ -97,32 +97,34 @@ const Weather = () => {
 
   return (
     <>
-      <div className="main_weather">
-        <div className="search">
-          <form className="search_form">
-            <input type="text" placeholder="Enter Your City" autoComplete="off" id="cityname" name="findcity" value={city} onChange={Change} />
-            <input type="submit" value="search" className="seach_btn" id="submitbtn" onClick={Search} />
-          </form>
-        </div>
-        <div className="weather">
-          <div className="top">
-            <p id="today">{info.day}</p>
-            <p id="today_date">{info.date}, {info.month} </p>
+      <div className='weather_box'>
+        <div className="main_weather">
+          <div className="search">
+            <form className="search_form">
+              <input type="text" placeholder="Enter Your City" autoComplete="off" id="cityname" name="findcity" value={city} onChange={Change} />
+              <input type="submit" value="search" className="seach_btn" id="submitbtn" onClick={Search} />
+            </form>
           </div>
-          <div className="middle">
-            <p id="city_name">{show}</p>
-            {
-              hide ?
-                <div className="middle_top">
-                  <p id="jh"> <span id="temp">{info.temp}</span><sup>o</sup>c </p>
-                  <div className="info">
-                    <Statu/>
-                    <h1 id="info_p">{info.atmosphere}</h1>
+          <div className="weather">
+            <div className="top">
+              <p id="today">{info.day}</p>
+              <p id="today_date">{info.date}, {info.month} </p>
+            </div>
+            <div className="middle">
+              <p id="city_name">{show}</p>
+              {
+                hide ?
+                  <div className="middle_top">
+                    <p id="jh"> <span id="temp">{info.temp}</span><sup>o</sup>c </p>
+                    <div className="info">
+                      <Statu />
+                      <h1 id="info_p">{info.atmosphere}</h1>
+                    </div>
+                  </div> :
+                  <div>
                   </div>
-                </div> :
-                <div>
-                </div>
-            }
+              }
+            </div>
           </div>
         </div>
       </div>
